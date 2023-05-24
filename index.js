@@ -12,7 +12,7 @@ const setup = () => {
   (function () {
     var sec = 0;
     timer = setInterval(()=>{
-      ele.innerHTML = '00:' +sec;
+      ele.innerHTML = '00:' +sec + " Out of: " +maxTime + " seconds.";
       sec ++;
       if (sec == maxTime){
         alert("Ran out of Time! Reached Max Time: " + maxTime);
