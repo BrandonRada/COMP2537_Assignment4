@@ -38,7 +38,12 @@ body.light {
   display: flex;
   flex-wrap: wrap;
 }
-
+.hardness{
+  text-align: center;
+}
+.powerUp{
+  text-align: center;
+}
 #game-info{
   font-size: larger;
 }
