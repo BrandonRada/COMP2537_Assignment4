@@ -1,5 +1,5 @@
 
-
+var maxTime = 200;
 const setup = () => {
   let firstCard = undefined
   let secondCard = undefined
@@ -14,8 +14,14 @@ const setup = () => {
     timer = setInterval(()=>{
       ele.innerHTML = '00:' +sec;
       sec ++;
+      if (sec == maxTime){
+        alert("Ran out of Time! Reached Max Time: " + maxTime);
+
+        location.reload();
+      }
     }, 1000)
   })()
+
 
 
   const seeCardsButton = document.getElementById("button-see-cards");
@@ -148,6 +154,7 @@ function easy(){
   mediumButton.classList.remove("active");
   const hardButton = document.getElementById('button-hard');
   hardButton.classList.remove("active");
+  maxTime = 200;
 }
 function medium(){
   const gameField = document.getElementById("game_grid")
@@ -186,6 +193,7 @@ function medium(){
   $(mediumButton).addClass("active");
   const hardButton = document.getElementById('button-hard');
   hardButton.classList.remove("active");
+  maxTime = 200;
 }
 function hard(){
   const gameField = document.getElementById("game_grid")
@@ -232,6 +240,7 @@ function hard(){
   mediumButton.classList.remove("active");
   const hardButton = document.getElementById('button-hard');
   $(hardButton).addClass("active");
+  maxTime = 15;
 }
 
 function light(){
