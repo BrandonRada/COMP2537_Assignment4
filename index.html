@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body id="body">
+  <div id="theme">
+    <input type="button" value="Light Mode" id="button-light" onclick="light()">
+    <input type="button" value="Dark Mode" id="button-dark" onclick="dark()">
+  </div>
+  <div id="game-stuff">
+    <div id="js_timer"> Time
+      <div id="timer"> 00:00</div>
+    </div>
+    <input type="button" id="start" value="start" onclick="start()">
+    <input type="button" id="reset" value="reset" onclick="reset()">
+  </div>
+  <div class="winMessage"></div>
+  <div id="game-info">
+    <div class="numClicks">Number Of Clicks: <span id="clickCount">0</span></div>
+    <div class="pairsLeft">Pairs Left: <span id="pairsLeftCount"></span></div>
+    <div class="pairsMatched">Pairs Matched: <span id="pairsMatchedCount">0</span></div>
+    <div class="totalPairs">Total Pairs: <span id="totalPairsCount"></span></div>
+  </div>
+  <br>
+  
+  <div class="hardness">
+      Dificulty
+    <input type="button" value="easy" id="button-easy" onclick="easy()">
+    <input type="button" value="medium" id="button-medium" onclick="medium()">
+    <input type="button" value="hard" id="button-hard" onclick="hard()">
+  </div>
+  <div class="powerUp">
+    <input type="button" value="See All Cards" id="button-see-cards">
+  </div>
+
+    <div id="game_grid">
+    <div class="card">
+      <img id="img1" class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img2" class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img3" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img4" class="front_face" src="001.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img5" class="front_face" src="002.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+    <div class="card">
+      <img id="img6" class="front_face" src="003.png" alt="">
+      <img class="back_face" src="back.webp" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
